@@ -1,6 +1,6 @@
-import type { SVGAttributes, SvelteHTMLElements } from 'svelte/elements';
+import type { SvelteHTMLElements } from 'svelte/elements';
 
-export type Attrs = SVGAttributes<SVGSVGElement>;
+export type Attrs = SvelteHTMLElements['svg'];
 
 export type IconNode = [elementName: keyof SvelteHTMLElements, attrs: Attrs][];
 

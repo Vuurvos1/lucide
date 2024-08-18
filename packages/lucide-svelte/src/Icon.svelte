@@ -1,7 +1,6 @@
 <script lang="ts">
   import defaultAttributes from './defaultAttributes';
   import type { IconProps } from './types';
-  import type { SvelteHTMLElement } from 'svelte/elements';
 
   let {
     name = undefined,
@@ -13,7 +12,7 @@
     class: classes,
     children,
     ...props
-  }: SvelteHTMLElement['svg'] = $props();
+  }: IconProps = $props();
 
   const mergeClasses = <ClassType = string | undefined | null,>(...classes: ClassType[]) =>
     classes
@@ -38,5 +37,8 @@
       {...attrs}
     />
   {/each}
-  {@render children()}
+
+  {#if children}
+    {@render children()}
+  {/if}
 </svg>

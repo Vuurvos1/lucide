@@ -24,8 +24,6 @@ const iconNode: IconNode = ${JSON.stringify(children)};
 @preview ![img](data:image/svg+xml;base64,${svgBase64}) - https://lucide.dev/icons/${iconName}
 @see https://lucide.dev/guide/packages/lucide-svelte - Documentation
 
-@param {IconProps} props - Lucide icons props and any valid SVG attribute
-@returns {FunctionalComponent} Svelte component
 ${deprecated ? `@deprecated ${deprecationReason}` : ''}
 -->
 
